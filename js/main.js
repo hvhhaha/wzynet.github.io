@@ -176,7 +176,7 @@ $("#telegram").mouseover(function () {
     $("#link-text").html("通过这里联系我");
 });
 $("#twitter").mouseover(function () {
-    $("#link-text").html("你懂的 ~");
+    $("#link-text").html("添加微信前往旧版哦");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
@@ -315,28 +315,12 @@ color: rgb(244,167,89);
 var styleContent = `
 color: rgb(30,152,255);
 `
-var title1 = '無名の主页'
+var title1 = 'wzyの主页'
 var title2 = `
- _____ __  __  _______     ____     __
-|_   _|  \\/  |/ ____\\ \\   / /\\ \\   / /
-  | | | \\  / | (___  \\ \\_/ /  \\ \\_/ / 
-  | | | |\\/| |\\___ \\  \\   /    \\   /  
- _| |_| |  | |____) |  | |      | |   
-|_____|_|  |_|_____/   |_|      |_|                                                     
+吴忠于到你浏览器一游，并卡上一顿                                              
 `
 var content = `
 版 本 号：2.2
-更新日期：2022-04-12
-
-更新说明：
-1. 新增 壁纸个性化设置
-2. 新增 音乐播放器支持音量控制
-3. 优化 部分动画及细节
-4. 优化 页面加载缓慢
-5. 优化 音乐延迟加载
-
-主页:  https://www.imsyy.top
-Github:  https://github.com/imsyy/home
 `
 console.log(`%c${title1} %c${title2}
 %c${content}`, styleTitle1, styleTitle2, styleContent)
