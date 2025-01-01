@@ -5,6 +5,7 @@ const ap = new APlayer({
     listMaxHeight: '336px',
     volume: '0.5',
     mutex: true,
+    autoplay: true,
     lrcType: 3,
     /* 下方更改为你自己的歌单就行 */
     audio: [
