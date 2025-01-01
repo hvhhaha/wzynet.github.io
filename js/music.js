@@ -7,7 +7,15 @@ const ap = new APlayer({
     mutex: true,
     lrcType: 3,
     /* 下方更改为你自己的歌单就行 */
-    audio: [-=
+    audio: [
+        {
+           name: "遇见",
+            artist: "孙燕姿",
+            url: "https://tools.liumingye.cn/music/api/link?id=m3f63OtUGNZoMDio1Kq9X7jE4kM2ddqh9eCynjQA7dWSL0qLZFeLha7Mu2hTNcZ8&quality=128&_t=1735702060711&token=20241016.ee5ab0004f5234351e6d3e2bc2e65816",
+            cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M0000024bjiL2aocxT_1.jpg?max_age=2592000",
+            lrc: "https://s-sh-2127-music.oss.dogecdn.com/lrc%2F%E5%91%A8%E6%9D%B0%E4%BC%A6-%E5%A4%9C%E6%9B%B2.lrc",
+            theme: "#171513"
+        },
         {
             name: "最美的太阳",
             artist: "张杰",
