@@ -98,8 +98,8 @@ fetch('http://gfeljm.tianqiapi.com/api?unescape=1&version=v61&appid=42481476&app
     .then(data => {
         $('#wea_text').html(data.wea)
         $('#city_text').html(data.city)
-        $('#tem_night').html(data.tem_night)
-        $('#tem_day').html(data.tem_day)
+        $('#tem_night').html(data.tem2)
+        $('#tem_day').html(data.tem1)
         // $('#win_text').html(data.win)
         // $('#win_speed').html(data.win_speed)
     })
