@@ -11,7 +11,7 @@ const ap = new APlayer({
         {
            name: "遇见",
             artist: "孙燕姿",
-            url: "https://lv-sycdn.kuwo.cn/120af20aa4c70cc06b3e289d3bf40a17/6774d886/resource/30106/trackmedia/M500004RMLd70LGo7K.mp3?bitrate$128&from=vip",
+            url: "../song/yujian.mp3",
             cover: "https://y.gtimg.cn/music/photo_new/T002R300x300M0000024bjiL2aocxT_1.jpg?max_age=2592000",
             lrc: "https://s-sh-2127-music.oss.dogecdn.com/lrc%2F%E5%91%A8%E6%9D%B0%E4%BC%A6-%E5%A4%9C%E6%9B%B2.lrc",
             theme: "#171513"
