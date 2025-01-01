@@ -161,7 +161,7 @@ $("#github").mouseover(function () {
     $("#link-text").html("通过这里联系我");
 });
 $("#qq").mouseover(function () {
-    $("#link-text").html("有什么事吗");
+    $("#link-text").html("有什么事吗QQ:1503753424");
 }).mouseout(function () {
     $("#link-text").html("通过这里联系我");
 });
