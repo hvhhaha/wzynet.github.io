@@ -51,7 +51,7 @@ function setBgImgInit() {
             $('#bg').attr('src', 'http://api.mmp.cc/api/bing?size=1920x1080&type=jpg'); //必应每日
             break;
         case "3":
-            $('#bg').attr('src', 'https://api.r10086.com/樱道随机图片api接口.php?图片系列=动漫综合1');//动漫综合
+            $('#bg').attr('src', 'https://moe.jitsu.top/img/?sort=pc&size=1080p');//动漫综合
             break;
         case "4":
             $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
@@ -90,7 +90,7 @@ $(document).ready(function () {
 
         if (type === "2") {
             setBgImg(bg_img);
-            $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php'); //必应每日
+            $('#bg').attr('src', 'http://api.mmp.cc/api/bing?size=1920x1080&type=jpg'); //必应每日
             iziToast.show({
                 message: '壁纸设置成功',
             });
@@ -98,7 +98,7 @@ $(document).ready(function () {
 
         if (type === "3") {
             setBgImg(bg_img);
-            $('#bg').attr('src', 'https://api.anosu.top/api?sort=r18'); //随机s图
+            $('#bg').attr('src', 'https://moe.jitsu.top/img/?sort=pc&size=1080p'); //动漫综合
             iziToast.show({
                 message: '壁纸设置成功',
             });
