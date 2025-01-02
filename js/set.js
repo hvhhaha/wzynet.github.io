@@ -54,19 +54,8 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://api.ixiaowai.cn/gqapi/gqapi.php'); //随机风景
             break;
         case "4":
-            $('#bg').attr('src', 'https://api.ixiaowai.cn/api/api.php'); //随机动漫
-            var pictures = new Array();
-            pictures[0] = './img/anim/1.webp';
-            pictures[1] = './img/anim/2.webp';
-            pictures[2] = './img/anim/3.webp';
-            pictures[3] = './img/anim/4.webp';
-            pictures[4] = './img/anim/5.webp';
-            pictures[5] = './img/anim/6.webp';
-            pictures[6] = './img/anim/7.webp';
-            pictures[7] = './img/anim/8.webp';
-            pictures[8] = './img/anim/9.webp';
-            pictures[9] = './img/anim/10.webp';
-            var rd = Math.floor(Math.random() * 10);
+            $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
+            break;
     }
 }
 
