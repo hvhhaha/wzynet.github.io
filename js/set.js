@@ -65,7 +65,7 @@ function setBgImgInit() {
             })
 
             function setBackgroundImage(imageUrl) {
-            $('#bg').css('background-image', `url(${imageUrl})`);//随机s图
+            $('#bg').css('background-image', 'url(${imageUrl})');//随机s图
             }
             break;
         case "4":
