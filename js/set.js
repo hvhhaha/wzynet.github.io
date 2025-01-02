@@ -51,13 +51,13 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php'); //必应每日
             break;
         case "3":
-            $('#bg').attr('src', 'se_tu'); //随机涩t
             fetch('https://api.anosu.top/api?sort=r18')
             .then(response => response.json())
             .then(data => {
                 $('#se_tu').html(data.pics)
             })
             .catch(console.error)
+            $('#bg').attr('src', 'se_tu'); //随机涩t
             break;
         case "4":
             $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
