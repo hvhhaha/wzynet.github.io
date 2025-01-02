@@ -93,7 +93,7 @@ fetch('https://v1.hitokoto.cn?max_length=24')
 //获取天气
 //每日限量 100 次
 //请前往 https://www.tianqiapi.com/ 申请（免费）
-fetch('http://gfeljm.tianqiapi.com/api?unescape=1&version=v61&appid=42481476&appsecret=pLF18gbR&ip')
+fetch('http://gfeljm.tianqiapi.com/api?unescape=1&version=v61&appid=42481476&appsecret=pLF18gbR&cityid=510100000000')
     .then(response => response.json())
     .then(data => {
         $('#wea_text').html(data.wea)
