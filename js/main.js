@@ -93,7 +93,7 @@ fetch('https://v1.hitokoto.cn?max_length=24')
 //获取天气
 //每日限量 100 次
 //请前往 https://www.tianqiapi.com/ 申请（免费）
-fetch('http://gfeljm.tianqiapi.com/api?unescape=1&version=v61&appid=42481476&appsecret=pLF18gbR&unescape=1&city=成都')
+fetch('http://v1.yiketianqi.com/api?unescape=1&version=v61&appid=42481476&appsecret=pLF18gbR&city=成都')
     .then(response => response.json())
     .then(data => {
         $('#wea_text').html(data.wea)
