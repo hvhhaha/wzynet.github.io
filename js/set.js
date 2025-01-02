@@ -53,17 +53,20 @@ function setBgImgInit() {
         case "3":
             const apiURL = 'https://api.anosu.top/api?sort=r18';
             fetch(apiURL)
-                .then(data => {
+            .then(data => {
                 // 检查code是否为200，表示请求成功
                 if (data.code === 200) {
-                    // 获取pics数组
-                    const pics = data.pics;
-                    // 假设我们只需要第一个图片URL
-                    const imageUrl = pics[0]; // 获取第一个图片的URL
-                }
-                })
-                .catch(console.error)
-            $('#bg').attr(imagUrl); //随机涩t
+                // 获取pics数组
+                const pics = data.pics;
+                // 假设我们只需要第一个图片URL
+                const imageUrl = pics[0]; 
+                setBackgroundImage(imageUrl); 
+                } 
+            })
+
+            function setBackgroundImage(imageUrl) {
+            $('#bg').css('background-image', `url(${imageUrl})`);//随机s图
+            }
             break;
         case "4":
             $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
