@@ -51,7 +51,7 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php'); //必应每日
             break;
         case "3":
-            $('#bg').attr('src', 'https://api.ixiaowai.cn/gqapi/gqapi.php'); //随机风景
+            $('#bg').attr('src', 'https://image.anosu.top/pixiv/direct?r18=1'); //随机涩t
             break;
         case "4":
             $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
