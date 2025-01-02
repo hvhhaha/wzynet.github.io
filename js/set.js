@@ -51,13 +51,19 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php'); //必应每日
             break;
         case "3":
-            fetch('https://api.anosu.top/api?sort=r18')
-            .then(response => response.json())
-            .then(data => {
-                $('#se_tu').html(data.pics)
-            })
-            .catch(console.error)
-            $('#bg').attr('src', 'se_tu'); //随机涩t
+            const apiURL = 'https://api.anosu.top/api?sort=r18';
+            fetch(apiURL)
+                .then(data => {
+                // 检查code是否为200，表示请求成功
+                if (data.code === 200) {
+                    // 获取pics数组
+                    const pics = data.pics;
+                    // 假设我们只需要第一个图片URL
+                    const imageUrl = pics[0]; // 获取第一个图片的URL
+                }
+                })
+                .catch(console.error)
+            $('#bg').attr(imagUrl); //随机涩t
             break;
         case "4":
             $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
