@@ -48,25 +48,10 @@ function setBgImgInit() {
             $('#bg').attr('src', pictures[rd]) //随机默认壁纸
             break;
         case "2":
-            $('#bg').attr('src', 'https://api.dujin.org/bing/1920.php'); //必应每日
+            $('#bg').attr('src', 'http://api.mmp.cc/api/bing?size=1920x1080&type=jpg'); //必应每日
             break;
         case "3":
-            const apiURL = 'https://api.anosu.top/api?sort=r18';
-            fetch(apiURL)
-            .then(data => {
-                // 检查code是否为200，表示请求成功
-                if (data.code === 200) {
-                // 获取pics数组
-                const pics = data.pics;
-                // 假设我们只需要第一个图片URL
-                const imageUrl = pics[0]; 
-                setBackgroundImage(imageUrl); 
-                } 
-            })
-
-            function setBackgroundImage(imageUrl) {
-            $('#bg').css('background-image', 'url(${imageUrl})');//随机s图
-            }
+            $('#bg').attr('src', 'https://api.r10086.com/樱道随机图片api接口.php?图片系列=动漫综合1');//动漫综合
             break;
         case "4":
             $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
