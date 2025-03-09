@@ -54,14 +54,15 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://moe.jitsu.top/img/?sort=pc&size=1080p');//动漫综合
             break;
         case "4":
-            $.ajax({
+             // 使用 AJAX 请求获取 JSON 数据
+             $.ajax({
                 url: 'https://image.anosu.top/pixiv/json',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    // 假设返回的 JSON 数据中有一个字段 'url' 包含图片的 URL
-                    if (data && data.url) {
-                        $('#bg').attr('src', data.url); // 设置背景图片
+                    // 检查返回的数据是否是数组且包含至少一个元素
+                    if (Array.isArray(data) && data.length > 0 && data[0].url) {
+                        $('#bg').attr('src', data[0].url); // 设置背景图片
                     } else {
                         console.error('Invalid JSON data:', data);
                     }
@@ -121,14 +122,15 @@ $(document).ready(function () {
 
         if (type === "4") {
             setBgImg(bg_img);
-            $.ajax({
+             // 使用 AJAX 请求获取 JSON 数据
+             $.ajax({
                 url: 'https://image.anosu.top/pixiv/json',
                 method: 'GET',
                 dataType: 'json',
                 success: function(data) {
-                    // 假设返回的 JSON 数据中有一个字段 'url' 包含图片的 URL
-                    if (data && data.url) {
-                        $('#bg').attr('src', data.url); // 设置背景图片
+                    // 检查返回的数据是否是数组且包含至少一个元素
+                    if (Array.isArray(data) && data.length > 0 && data[0].url) {
+                        $('#bg').attr('src', data[0].url); // 设置背景图片
                     } else {
                         console.error('Invalid JSON data:', data);
                     }
