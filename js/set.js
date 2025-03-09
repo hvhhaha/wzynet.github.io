@@ -56,9 +56,8 @@ function setBgImgInit() {
         case "4":
              // 使用 AJAX 请求获取 JSON 数据
              $.ajax({
-                url: 'https://api.lolicon.app/setu/v2',
+                url: 'https://api.lolicon.app/setu/v2?r18=1',
                 method: 'GET',
-                data: { r18: 1 },
                 dataType: 'json',
                 success: function(response) {
                     // 检查返回的数据是否有效
@@ -125,9 +124,8 @@ $(document).ready(function () {
             setBgImg(bg_img);
              // 使用 AJAX 请求获取 JSON 数据
              $.ajax({
-                url: 'https://api.lolicon.app/setu/v2',
+                url: 'https://api.lolicon.app/setu/v2?r18=1',
                 method: 'GET',
-                data: { r18: 1},
                 dataType: 'json',
                 success: function(response) {
                     // 检查返回的数据是否有效
