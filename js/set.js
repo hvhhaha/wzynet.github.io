@@ -56,15 +56,15 @@ function setBgImgInit() {
         case "4":
              // 使用 AJAX 请求获取 JSON 数据
              $.ajax({
-                url: 'https://api.lolicon.app/setu/v2?r18=1',
+                url: 'https://image.anosu.top/pixiv/json',
                 method: 'GET',
                 dataType: 'json',
-                success: function(response) {
-                    // 检查返回的数据是否有效
-                    if (response && response.data && response.data.length > 0 && response.data[0].urls && response.data[0].urls.original) {
-                        $('#bg').attr('src', response.data[0].urls.original); // 设置背景图片
+                success: function(data) {
+                    // 检查返回的数据是否是数组且包含至少一个元素
+                    if (Array.isArray(data) && data.length > 0 && data[0].url) {
+                        $('#bg').attr('src', data[0].url); // 设置背景图片
                     } else {
-                        console.error('Invalid JSON data:', response);
+                        console.error('Invalid JSON data:', data);
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
@@ -124,15 +124,15 @@ $(document).ready(function () {
             setBgImg(bg_img);
              // 使用 AJAX 请求获取 JSON 数据
              $.ajax({
-                url: 'https://api.lolicon.app/setu/v2?r18=1',
+                url: 'https://image.anosu.top/pixiv/json',
                 method: 'GET',
                 dataType: 'json',
-                success: function(response) {
-                    // 检查返回的数据是否有效
-                    if (response && response.data && response.data.length > 0 && response.data[0].urls && response.data[0].urls.original) {
-                        $('#bg').attr('src', response.data[0].urls.original); // 设置背景图片
+                success: function(data) {
+                    // 检查返回的数据是否是数组且包含至少一个元素
+                    if (Array.isArray(data) && data.length > 0 && data[0].url) {
+                        $('#bg').attr('src', data[0].url); // 设置背景图片
                     } else {
-                        console.error('Invalid JSON data:', response);
+                        console.error('Invalid JSON data:', data);
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
