@@ -54,7 +54,22 @@ function setBgImgInit() {
             $('#bg').attr('src', 'https://moe.jitsu.top/img/?sort=pc&size=1080p');//动漫综合
             break;
         case "4":
-            $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
+            $.ajax({
+                url: 'https://image.anosu.top/pixiv/json',
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // 假设返回的 JSON 数据中有一个字段 'url' 包含图片的 URL
+                    if (data && data.url) {
+                        $('#bg').attr('src', data.url); // 设置背景图片
+                    } else {
+                        console.error('Invalid JSON data:', data);
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('Failed to fetch image URL:', textStatus, errorThrown);
+                }
+            });
             break;
     }
 }
@@ -106,7 +121,22 @@ $(document).ready(function () {
 
         if (type === "4") {
             setBgImg(bg_img);
-            $('#bg').attr('src', 'https://t.mwm.moe/pc'); //随机动漫
+            $.ajax({
+                url: 'https://image.anosu.top/pixiv/json',
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // 假设返回的 JSON 数据中有一个字段 'url' 包含图片的 URL
+                    if (data && data.url) {
+                        $('#bg').attr('src', data.url); // 设置背景图片
+                    } else {
+                        console.error('Invalid JSON data:', data);
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('Failed to fetch image URL:', textStatus, errorThrown);
+                }
+            });
             iziToast.show({
                 message: '壁纸设置成功',
             });
